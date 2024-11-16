@@ -1,0 +1,17 @@
+Так как домашку сделал не за раз, команды представлены только последние. Примерные команды до представлены ниже.
+
+(.venv) PS C:\Users\User\Desktop\uu\Module_19> cd GameBase           
+(.venv) PS C:\Users\User\Desktop\uu\Module_19\GameBase> python manage.py shell
+Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from task1.models import Game, Buyer
+>>> a = Buyer.objects.filter(age__lte=18)
+>>> Game.objects.get(id=2).buyer.set(a)
+>>> a = Buyer.objects.all()
+>>> Game.objects.get(id=2).buyer.set(a)
+
+
+a = Buyer.object.filter(age__gt=18)
+Game.objects.get(id=1).buyer.set(a)
+Game.objects.get(id=3).buyer.set(a)
